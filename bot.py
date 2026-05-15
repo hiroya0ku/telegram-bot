@@ -3,7 +3,8 @@ from aiogram.filters import Command
 from aiogram.types import Message
 import asyncio
 
-TOKEN = '8681119853:AAHhklnOOFlafsCT6rQ9mjbpG8_TGmFD-g8'
+import os
+TOKEN = os.getenv("BOT_TOKEN")
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
 @dp.message(Command('start'))
